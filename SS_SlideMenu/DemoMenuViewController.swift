@@ -25,7 +25,6 @@ extension DemoMenuViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DemoMenuTableViewCellID", for: indexPath) as? DemoMenuTableViewCell {
              let model = self.dataSource?[indexPath.row]
             cell.titleString = model?.title
