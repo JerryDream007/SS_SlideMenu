@@ -33,5 +33,11 @@ extension DemoMenuViewController:UITableViewDelegate,UITableViewDataSource{
         return UITableViewCell()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.slideMenuVC?.closeMenu()
+        let demoNextVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NextViewControllerID")
+        let navigationVC = appDelegate.slideMenuVC?.mainController as? UINavigationController
+        navigationVC?.pushViewController(demoNextVC, animated: true)
+    }
 }

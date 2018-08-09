@@ -12,10 +12,15 @@ class DemoMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func unwindToMainVC(sender:UIStoryboardSegue){
+        
     }
     
     @IBAction func clickOpenMenuButton(_ sender: Any) {

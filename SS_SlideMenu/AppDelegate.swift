@@ -19,10 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let demoMenuVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DemoMenuViewControllerID")
         let demoMainVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DemoMainViewControllerID")
+        let demoNavigationVC = UINavigationController(rootViewController: demoMainVC)
         
-        self.slideMenuVC = SS_SlideMenuViewController.init(menuController: demoMenuVC, mainController: demoMainVC)
-//        self.slideMenuVC = SS_SlideMenuViewController.init(menuController: demoMenuVC, mainController: demoMainVC, backgroundImageName: "fx_mobileLive_mine_concern_bg2", slideScale: 1.0)
-//        self.slideMenuVC = SS_SlideMenuViewController.init(menuController: demoMenuVC, mainController: demoMainVC, backgroundImageName: "fx_mobileLive_mine_concern_bg3", slideScale: 1.0, slideDistanceScale: CGFloat(5.0/6.0))
+        self.slideMenuVC = SS_SlideMenuViewController.init(menuController: demoMenuVC, mainController: demoNavigationVC)
+//        self.slideMenuVC = SS_SlideMenuViewController.init(menuController: demoMenuVC, mainController: demoNavigationVC, backgroundImageName: "fx_mobileLive_mine_concern_bg2", slideScale: 1.0)
+//        self.slideMenuVC = SS_SlideMenuViewController.init(menuController: demoMenuVC, mainController: demoNavigationVC, backgroundImageName: "fx_mobileLive_mine_concern_bg3", slideScale: 1.0, slideDistanceScale: CGFloat(5.0/6.0))
         
         self.window?.rootViewController = self.slideMenuVC
         self.window?.makeKeyAndVisible()
