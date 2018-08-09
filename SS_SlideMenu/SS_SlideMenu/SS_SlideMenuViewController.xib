@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SS_SlideMenuViewController" customModule="SS_SlideMenu" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="LNu-LF-kyw" id="zmS-SN-ATo"/>
+                <outlet property="mainContainerView" destination="UMO-lG-1PX" id="gb1-Pn-n3t"/>
+                <outlet property="mainContainerViewLeftSpace" destination="DZA-MB-uWO" id="XbH-rw-ASJ"/>
+                <outlet property="menuContainerView" destination="kAv-hE-tBY" id="l3M-J4-TXh"/>
+                <outlet property="menuContainerViewLeftSpace" destination="dDB-Kk-AdO" id="WU3-CQ-d4J"/>
+                <outlet property="menuContainerViewWidth" destination="ZNa-K8-k9e" id="zd0-sX-YWP"/>
+                <outlet property="view" destination="iN0-l3-epB" id="JZc-dk-oq7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa8-KM-Gy1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VgW-uW-fzn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fx_mobileLive_mine_concern_bg1" translatesAutoresizingMaskIntoConstraints="NO" id="LNu-LF-kyw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAv-hE-tBY">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZNa-K8-k9e"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMO-lG-1PX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LNu-LF-kyw" secondAttribute="trailing" id="2mp-Nt-BHD"/>
+                            <constraint firstItem="LNu-LF-kyw" firstAttribute="leading" secondItem="VgW-uW-fzn" secondAttribute="leading" id="7Dc-wo-RgX"/>
+                            <constraint firstItem="UMO-lG-1PX" firstAttribute="leading" secondItem="VgW-uW-fzn" secondAttribute="leading" id="DZA-MB-uWO"/>
+                            <constraint firstAttribute="bottom" secondItem="LNu-LF-kyw" secondAttribute="bottom" id="UHg-Yf-d0o"/>
+                            <constraint firstAttribute="bottom" secondItem="kAv-hE-tBY" secondAttribute="bottom" id="Wu9-dM-L6X"/>
+                            <constraint firstAttribute="bottom" secondItem="UMO-lG-1PX" secondAttribute="bottom" id="c9P-Uh-H65"/>
+                            <constraint firstItem="kAv-hE-tBY" firstAttribute="leading" secondItem="VgW-uW-fzn" secondAttribute="leading" id="dDB-Kk-AdO"/>
+                            <constraint firstItem="UMO-lG-1PX" firstAttribute="width" secondItem="VgW-uW-fzn" secondAttribute="width" id="lL8-HS-VU8"/>
+                            <constraint firstItem="LNu-LF-kyw" firstAttribute="top" secondItem="VgW-uW-fzn" secondAttribute="top" id="odd-sT-v8p"/>
+                            <constraint firstItem="UMO-lG-1PX" firstAttribute="top" secondItem="VgW-uW-fzn" secondAttribute="top" id="t0i-OU-mds"/>
+                            <constraint firstItem="kAv-hE-tBY" firstAttribute="top" secondItem="VgW-uW-fzn" secondAttribute="top" id="vIL-lz-Af9"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wa8-KM-Gy1" secondAttribute="trailing" id="1lW-tE-dHG"/>
+                <constraint firstAttribute="bottom" secondItem="wa8-KM-Gy1" secondAttribute="bottom" id="3yB-bA-IIh"/>
+                <constraint firstItem="wa8-KM-Gy1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Swx-4M-wxS"/>
+                <constraint firstItem="wa8-KM-Gy1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bmA-RJ-sKN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="11.5" y="27.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fx_mobileLive_mine_concern_bg1" width="168" height="105"/>
+    </resources>
+</document>
