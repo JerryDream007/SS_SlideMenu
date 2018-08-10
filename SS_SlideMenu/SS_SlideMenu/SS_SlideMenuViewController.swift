@@ -96,8 +96,9 @@ class SS_SlideMenuViewController: UIViewController {
     
     //给主容器增加点击手势
     func setupMainTapView(){
-        self.mainTapView.frame = self.mainContainerView.bounds
-        self.mainContainerView.addSubview(self.mainTapView)
+        let menuWidth = self.slideDistance + self.mainContainerView.frame.width * CGFloat( (1-self.slideScale)/2 )
+        self.mainTapView.frame = CGRect.init(x: menuWidth, y: 0, width: UIScreen.main.bounds.width - menuWidth, height: UIScreen.main.bounds.height)
+        self.view.addSubview(self.mainTapView)
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(handleMainTapGesture(tapGesure:)))
         self.mainTapView.addGestureRecognizer(tapGesture)
         self.mainTapView.isHidden = true
@@ -124,16 +125,16 @@ class SS_SlideMenuViewController: UIViewController {
         
         switch panGesture.state {
         case .began:
-            print("打开手势状态:开始")
+//            print("打开手势状态:开始")
         case .changed:
-            print("打开手势状态:改变")
+//            print("打开手势状态:改变")
             if translation.x > 0{
                 var scale = translation.x / (self.mainController?.view.frame.width)!
                 scale = min(max(0, scale),1)
                 self.openMenuWithScale(scale: scale)
             }
         case .ended:
-            print("打开手势状态:结束")
+//            print("打开手势状态:结束")
             if translation.x > 0{
                 if velocity.x > 200{
                     self.openMenuWithScale(scale: 1.0)
@@ -149,7 +150,7 @@ class SS_SlideMenuViewController: UIViewController {
                 self.openMenuWithScale(scale: 0.0)
             }
         default:
-            print("打开手势状态:取消 或 失败 或 未知")
+//            print("打开手势状态:取消 或 失败 或 未知")
             self.openMenuWithScale(scale: 0.0)
         }
     }
@@ -161,16 +162,16 @@ class SS_SlideMenuViewController: UIViewController {
         
         switch panGesture.state {
         case .began:
-            print("关闭手势状态:开始")
+//            print("关闭手势状态:开始")
         case .changed:
-            print("关闭手势状态:改变")
+//            print("关闭手势状态:改变")
             if translation.x < 0{
                 var scale = fabs(translation.x) / (self.menuController?.view.frame.width)!
                 scale = min(max(0, scale),1)
                 self.closeMenuWithScale(scale: scale)
             }
         case .ended:
-            print("关闭手势状态:结束")
+//            print("关闭手势状态:结束")
             if translation.x < 0{
                 if fabs(velocity.x) > 200{
                     self.closeMenuWithScale(scale: 1.0)
@@ -186,7 +187,7 @@ class SS_SlideMenuViewController: UIViewController {
                 self.closeMenuWithScale(scale: 0.0)
             }
         default:
-            print("关闭手势状态:取消 或 失败 或 未知")
+//            print("关闭手势状态:取消 或 失败 或 未知")
             self.closeMenuWithScale(scale: 0.0)
         }
     }
@@ -216,7 +217,7 @@ class SS_SlideMenuViewController: UIViewController {
             let transformScaleX = self.slideScale + (1 - self.slideScale) * (1 - scale)
             self.mainContainerView.transform = CGAffineTransform.init(scaleX: transformScaleX, y: transformScaleX)
             self.mainContainerViewLeftSpace.constant = self.slideDistance * scale
-            self.view.layoutIfNeeded()
+//            self.view.layoutIfNeeded()
         }){ (_) in
             
         }
@@ -245,7 +246,7 @@ class SS_SlideMenuViewController: UIViewController {
             self.mainContainerViewLeftSpace.constant = self.slideDistance * (1 - scale)
             let transformScaleX = self.slideScale + (1 - self.slideScale) * scale
             self.mainContainerView.transform = CGAffineTransform.init(scaleX: transformScaleX, y: transformScaleX)
-            self.view.layoutIfNeeded()
+//            self.view.layoutIfNeeded()
         }) { (_) in
             
         }
